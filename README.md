@@ -42,7 +42,11 @@ the quantifiers will be "{2,6}" although the bracket expression is "[a-z\.]" so 
 
 ### Character Classes
 
-A character class in a regex defines a set of characters, any one of which can occur in an input string to fulfill a match.
+A character class in a regex defines a set of characters, any one of which can occur in an input string to fulfill a match. Here are some common character classes: 
+|"."—Matches any character except the newline character (\n)|
+|"\d"—Matches any Arabic numeral digit. This class is equivalent to the bracket expression [0-9].|
+|"\w"—Matches any alphanumeric character from the basic Latin alphabet, including the underscore (_). This class is equivalent to the bracket expression [A-Za-z0-9_].|
+|"\s"—Matches a single whitespace character, including tabs and line breaks|
 
 ### Flags
 
