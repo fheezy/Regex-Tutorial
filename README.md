@@ -20,7 +20,6 @@ we will learn how this regex '/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/'
 - [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Author](#author)
 
 ## Regex Components
@@ -43,20 +42,32 @@ the quantifiers will be "{2,6}" although the bracket expression is "[a-z\.]" so 
 ### Character Classes
 
 A character class in a regex defines a set of characters, any one of which can occur in an input string to fulfill a match. Here are some common character classes: 
-|"."—Matches any character except the newline character (\n)|
-|"\d"—Matches any Arabic numeral digit. This class is equivalent to the bracket expression [0-9].|
-|"\w"—Matches any alphanumeric character from the basic Latin alphabet, including the underscore (_). This class is equivalent to the bracket expression [A-Za-z0-9_].|
-|"\s"—Matches a single whitespace character, including tabs and line breaks|
+"."—Matches any character except the newline character (\n)
+
+"\d"—Matches any Arabic numeral digit. This class is equivalent to the bracket expression [0-9].
+
+"\w"—Matches any alphanumeric character from the basic Latin alphabet, including the underscore (_). This class is equivalent to the bracket expression [A-Za-z0-9_].
+
+"\s"—Matches a single whitespace character, including tabs and line breaks.
+However in this regex, you can see that we have a "\d" therefore this character can be defined with a single digit or from 0-9.
 
 ### Flags
 
+Flags are placed at the end of a regex, after the second slash, and they define additional functionality or limits for the regex. Out of the 6 optional flags that can be used, the 3 most common you'll encounter are: 
+"g"—Global search: the regex should be tested against all possible matches in a string.
+
+"i"—Case-insensitive search: case should be ignored while attempting a match in a string
+
+"m"—Multi-line search: a multi-line input string should be treated as multiple lines 
+
 ### Grouping and Capturing
+
+Capturing groups are a way to treat multiple characters as a single unit. They are created by placing the characters to be grouped inside a set of parentheses. In simple terms it is dividing the arrays with "()" but in this case our email regex '/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/' has 3 groups ([a-z0-9_\.-]+), ([\da-z\.-]+), and ([a-z\.]{2,6}). Between the three groups you can see that the "@" and "." which indicates that its an email regex, the first group is right before the "@" and after will be provided witht the provider and after the "." will end with three characters.
 
 ### Bracket Expressions
 
-### Greedy and Lazy Match
-
+Anything inside a set of square brackets ([]) represents a range of characters that we want to match. These patterns are known as bracket expressions, but they are also known as a positive character group, because they outline the characters we want to include. In regards in this regex, the bracket expression would be "[a-z0-9] therefore leading the computer to search any characters between a-z and any digit between 0-9.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Farhan Hoque [Github](https://github.com/fheezy)
